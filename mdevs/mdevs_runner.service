@@ -1,0 +1,10 @@
+[Unit]
+Description=Run manage_mdevs.sh every 30 seconds
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /root/mdevs/mdevs_runner.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
